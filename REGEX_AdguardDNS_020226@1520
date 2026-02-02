@@ -1,0 +1,81 @@
+# =========================
+# Generic ad / tracker hosts
+# =========================
+# Common ad/tracker subdomains
+(^|\.)ads[0-9]*\.
+(^|\.)adserver[0-9]*\.
+(^|\.)adserv(er|ice|ices)?\.
+(^|\.)adslite\.
+(^|\.)adsystem\.
+(^|\.)advert(is(ing|ements?)?)?\.
+(^|\.)affiliat(es?|e-program)\.
+(^|\.)track(er|ing)?[0-9]*\.
+(^|\.)metrics?\.
+(^|\.)stat(s|istics)?[0-9]*\.
+(^|\.)telemetry\.
+(^|\.)analytic(s|al)?\.
+(^|\.)pixel[s0-9]*\.
+(^|\.)beacon[s0-9]*\.
+(^|\.)tagmanager\.
+(^|\.)doubleclick\.
+(^|\.)googlesyndication\.
+(^|\.)google-analytics\.
+(^|\.)facebook-analytics\.
+(^|\.)fbcdn-ads\.
+(^|\.)logg(er|ing)?\.
+# =========================
+# Path-based ad / banner URLs
+# =========================
+# Generic ad and banner paths
+/(^|\/)(ads?|adserver|adservice|adclick)(\/|\.|\?)
+/(^|\/)(banner|banners)(\/|\.|\?)
+/(^|\/)(promo|promotions?)(\/|\.|\?)
+/(^|\/)(sponsored|sponsorship)(\/|\.|\?)
+/(^|\/)(tracking|track(er)?)(\/|\.|\?)
+/(^|\/)(metrics?|stats?)(\/|\.|\?)
+/(^|\/)(impress(ion|ions)|click(track(er)?|s)?)(\/|\.|\?)
+/(^|\/)(affiliates?|affiliate-links?)(\/|\.|\?)
+/banner[0-9]*\.(gif|jpe?g|png|webp)
+/ad[s0-9_-]*\.(gif|jpe?g|png|webp|js)
+/promo[_-]?[0-9]*\.(gif|jpe?g|png|webp|js)
+# =========================
+# Known tracking patterns
+# =========================
+/collect(\?|\/)
+/event(s)?(\?|\/)
+/pixel(\?|\/)
+/track(er)?(\?|\/)
+/analytics(\?|\/)
+/pageview(\?|\/)
+/conversion(\?|\/)
+/gtm\.js
+/ga\.js
+/gtag/js
+/fbevents\.js
+/matomo(\.php|\.js)
+/piwik(\.php|\.js)
+# =========================
+# “Noise” / nuisance services
+# =========================
+(^|\.)hotjar\.
+(^|\.)fullstory\.
+(^|\.)mixpanel\.
+(^|\.)segment\.
+(^|\.)newrelic\.
+(^|\.)optimizely\.
+(^|\.)app-measurement\.
+(^|\.)appsflyer\.
+(^|\.)adjust\.
+(^|\.)branch\.io$
+(^|\.)crashlytics\.
+(^|\.)bugsnag\.
+# =========================
+# Aggressive generic patterns
+# (Consider disabling if they break sites)
+# =========================
+# Any host with ".ads." or ".adserver."
+\.ads\.
+\.adserver\.
+# Any host with ".telemetry." or ".metrics."
+\.telemetry\.
+\.metrics?\.
